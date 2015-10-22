@@ -1,0 +1,17 @@
+{
+    "name": "ASP.NET",
+    "private": true,
+    "dependencies": {
+        "bootstrap": "3.3.5"
+    },
+    "exportsOverride": {
+        "bootstrap": {
+            "js": "dist/js/*.*",
+            "css": "dist/css/*.*",
+            "fonts": "dist/fonts/*.*"
+        },
+        "jquery": {
+            "js": "jquery.{js,min.js,min.map}"
+        }
+    }
+}

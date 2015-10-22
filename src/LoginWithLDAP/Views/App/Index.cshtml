@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+// ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <div class="container">
+        <h1>Welcome @ViewBag.GivenName!</h1>
+        <p>You've successfully logged in :)</p>
+
+        <h4>User details:</h4>
+        Name : @ViewBag.Name<br />
+        Email : @ViewBag.Email<br />
+        GivenName : @ViewBag.GivenName<br />
+        Surname : @ViewBag.Surname<br />
+        <br />
+
+        <h4>User rights:</h4>
+        Viewer : @ViewBag.Viewer<br />
+        Administrator : @ViewBag.Administrator<br /><br />
+
+        <form asp-controller="App" asp-action="LogOff"
+              asp-route-returnurl="@ViewBag.ReturnUrl" method="post" role="form">
+
+            <input type="submit" value="Logout >>" class="btn btn-primary btn-lg" />
+        </form>
+    </div>
+</div>

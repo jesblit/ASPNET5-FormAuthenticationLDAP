@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <base href="@Url.Content("~")" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <!-- bower:css -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- bower:js -->
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbower -->
+</body>
+</html>
