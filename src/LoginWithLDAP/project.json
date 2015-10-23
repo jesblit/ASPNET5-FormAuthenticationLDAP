@@ -3,19 +3,20 @@
     "version": "1.0.0-*",
 
     "dependencies": {
-        "Microsoft.AspNet.Server.IIS": "1.0.0-beta6",
-        "Microsoft.AspNet.Server.WebListener": "1.0.0-beta6",
-        "Microsoft.AspNet.Http": "1.0.0-beta6",
-        "Microsoft.AspNet.Authorization": "1.0.0-beta6",
-        "Microsoft.AspNet.Authentication.Cookies": "1.0.0-beta6",
-        "Microsoft.AspNet.Identity": "3.0.0-beta6",
-        "Microsoft.AspNet.Mvc": "6.0.0-beta6",
-        "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-beta6",
-        "Microsoft.Framework.Configuration.Json": "1.0.0-beta6"
+        "Microsoft.AspNet.Server.Kestrel": "1.0.0-beta8",
+        "Microsoft.AspNet.IISPlatformHandler": "1.0.0-beta8",
+        "Microsoft.AspNet.Server.WebListener": "1.0.0-beta8",
+        "Microsoft.AspNet.Http": "1.0.0-beta8",
+        "Microsoft.AspNet.Authorization": "1.0.0-beta8",
+        "Microsoft.AspNet.Authentication.Cookies": "1.0.0-beta8",
+        "Microsoft.AspNet.Identity": "3.0.0-beta8",
+        "Microsoft.AspNet.Mvc": "6.0.0-beta8",
+        "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-beta8",
+        "Microsoft.Framework.Configuration.Json": "1.0.0-beta8"
     },
 
     "commands": {
-        "web": "Microsoft.AspNet.Hosting --config hosting.ini"
+        "web": "Microsoft.AspNet.Server.Kestrel"
     },
 
     "frameworks": {

@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNet.Authentication.Cookies;
-using Microsoft.AspNet.Hosting;
+using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Identity;
 using Microsoft.Framework.OptionsModel;
 

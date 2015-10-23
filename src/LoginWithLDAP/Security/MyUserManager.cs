@@ -4,6 +4,7 @@ using System.DirectoryServices.AccountManagement;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Hosting;
+using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Identity;
 using Microsoft.Framework.OptionsModel;
 
@@ -30,8 +31,8 @@ namespace LoginWithLDAP
             IdentityErrorDescriber errors,
             IEnumerable<IUserTokenProvider<MyUser>> tokenProviders,
             IHttpContextAccessor contextAccessor) :
-            base(store, optionsAccessor, passwordHasher, userValidators, passwordValidators, keyNormalizer, errors, tokenProviders,
-                null, contextAccessor)
+            base(store, optionsAccessor, passwordHasher, userValidators, passwordValidators, keyNormalizer, errors,
+                null, null, contextAccessor)
         {
 
         }

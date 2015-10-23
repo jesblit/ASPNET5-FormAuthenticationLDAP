@@ -2,13 +2,12 @@
 using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Http;
 using Microsoft.Framework.DependencyInjection;
-using Microsoft.Framework.Runtime;
 
 namespace LoginWithLDAP
 {
     public class Startup
     {
-        public Startup(IHostingEnvironment env, IApplicationEnvironment appEnv)
+        public Startup(IHostingEnvironment env)
         {
 
         }

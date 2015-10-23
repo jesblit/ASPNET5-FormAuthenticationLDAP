@@ -3,7 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Authentication.Cookies;
 using Microsoft.AspNet.Authorization;
-using Microsoft.AspNet.Hosting;
+using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Mvc;
 using Microsoft.Framework.OptionsModel;
@@ -72,7 +72,7 @@ namespace LoginWithLDAP
                     if (claimsPrincipal != null && claimsPrincipal.Identity != null)
                     {
                         // Set the claims to the user 
-                        await Context.Authentication.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal);
+                        await HttpContext.Authentication.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal);
                         return RedirectToAction("Index", "App");
                     }
                     else
