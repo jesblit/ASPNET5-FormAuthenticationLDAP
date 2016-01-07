@@ -6,7 +6,7 @@ using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Mvc;
-using Microsoft.Framework.OptionsModel;
+using Microsoft.Extensions.Configuration;
 
 namespace LoginWithLDAP
 {
@@ -16,9 +16,7 @@ namespace LoginWithLDAP
         public UserManager<MyUser> UserManager { get; private set; }
         public SignInManager<MyUser> SignInManager { get; private set; }
 
-        public AppController(IHttpContextAccessor httpContextAccessor,
-                UserManager<MyUser> userManager,
-                IOptions<IdentityOptions> optionsAccessor)
+        public AppController(IHttpContextAccessor httpContextAccessor, UserManager<MyUser> userManager)
         {
             SignInManager = new MySignInManager(userManager as MyUserManager, httpContextAccessor, new MyClaimsPrincipleFactory());
             UserManager = userManager;

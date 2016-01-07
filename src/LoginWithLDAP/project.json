@@ -3,16 +3,26 @@
     "version": "1.0.0-*",
 
     "dependencies": {
-        "Microsoft.AspNet.Server.Kestrel": "1.0.0-beta8",
-        "Microsoft.AspNet.IISPlatformHandler": "1.0.0-beta8",
-        "Microsoft.AspNet.Server.WebListener": "1.0.0-beta8",
-        "Microsoft.AspNet.Http": "1.0.0-beta8",
-        "Microsoft.AspNet.Authorization": "1.0.0-beta8",
-        "Microsoft.AspNet.Authentication.Cookies": "1.0.0-beta8",
-        "Microsoft.AspNet.Identity": "3.0.0-beta8",
-        "Microsoft.AspNet.Mvc": "6.0.0-beta8",
-        "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-beta8",
-        "Microsoft.Framework.Configuration.Json": "1.0.0-beta8"
+        "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
+        "Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final",
+        "Microsoft.AspNet.Server.WebListener": "1.0.0-rc1-final",
+        "Microsoft.AspNet.Http": "1.0.0-rc1-final",
+        "Microsoft.AspNet.Authorization": "1.0.0-rc1-final",
+        "Microsoft.AspNet.Authentication.Cookies": "1.0.0-rc1-final",
+        "Microsoft.AspNet.Identity": "3.0.0-rc1-final",
+        "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
+        "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-rc1-final",
+        "Microsoft.AspNet.Mvc.Core": "6.0.0-rc1-final",
+        "Microsoft.AspNet.Mvc.ApiExplorer": "6.0.0-rc1-final",
+        "Microsoft.AspNet.Mvc.Abstractions": "6.0.0-rc1-final",
+        "Microsoft.Extensions.CodeGenerators.Mvc": "1.0.0-rc1-final",
+        "Microsoft.Extensions.Configuration.FileProviderExtensions": "1.0.0-rc1-final",
+        "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
+        "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0-rc1-final",
+        "Microsoft.Extensions.Configuration": "1.0.0-rc1-final",
+        "Microsoft.Extensions.Logging": "1.0.0-rc1-final",
+        "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
+        "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final"
     },
 
     "commands": {
@@ -38,5 +48,10 @@
         "wwwroot",
         "node_modules",
         "bower_components"
-    ]
+    ],
+
+    "scripts": {
+        "postrestore": [ "npm install" ],
+        "prepare": [ "grunt bower:install" ]
+    }
 }

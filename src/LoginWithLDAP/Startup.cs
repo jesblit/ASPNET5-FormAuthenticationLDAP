@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Http;
-using Microsoft.Framework.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace LoginWithLDAP
 {
@@ -44,7 +44,7 @@ namespace LoginWithLDAP
             app.UseIdentity();
             app.UseCookieAuthentication(options =>
             {
-                options.AutomaticAuthentication = true;
+                options.AutomaticAuthenticate = true;
                 options.LoginPath = new PathString("/App/Login");
             });
         }
